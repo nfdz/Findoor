@@ -15,16 +15,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import io.github.nfdz.findoor.model.DisabledWifiException;
 import io.github.nfdz.findoor.model.Record;
 
 public class FindoorRecorder {
 
     public interface Listener {
         void onNotifyRecords(List<Record> records, long recordTime);
-    }
-
-    public static class DisabledWifiException extends Exception {
-        private static final long serialVersionUID = 1L;
     }
 
     private static final IntentFilter RECEIVER_FILTER = new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION);
