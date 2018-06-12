@@ -75,7 +75,9 @@ public class FindoorLiveComparator {
 
     private class ProcessCallback implements ProcessRecordsTask.Callback {
         @Override
-        public void onProcessFinish(List<LocationsComparison> newComparisons, Map<Integer, List<RecordsStatistics>> locationStatisticsCache) {
+        public void onProcessFinish(List<LocationsComparison> newComparisons,
+                                    Map<Integer, List<RecordsStatistics>> locationStatisticsCache) {
+            // TODO save cache
             comparisons.clear();
             comparisons.addAll(newComparisons);
             if (listener != null) {
@@ -114,14 +116,8 @@ public class FindoorLiveComparator {
         }
 
         @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            // TODO
-        }
-
-        @Override
         protected Void doInBackground(Void... voids) {
-            // TODO
+            // TODO process cache if needed
             return null;
         }
 
