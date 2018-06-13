@@ -1,0 +1,24 @@
+<resources>
+
+    <string name="app_name">Findoor Demo</string>
+
+    <string name="record_location">Record location</string>
+    <string name="view_location">Visualize location</string>
+    <string name="compare_locations">Compare locations</string>
+    <string name="list_locations">List locations</string>
+    <string name="set_alias_location">Set alias</string>
+    <string name="try_location">Try locations</string>
+    <string name="remove_location">Delete location</string>
+    <string name="export_location">Export location</string>
+    <string name="import_location">Import location</string>
+
+    <string name="list_locations_msg">Error: there was a problem listing locations.</string>
+    <string name="list_locations_title">Locations with records</string>
+    <string name="location_error_msg">Error: invalid location.</string>
+    <string name="set_alias_location_success">Alias saved successfully</string>
+    <string name="set_alias_location_title">Alias</string>
+    <string name="location_label">Location:</string>
+    <string name="alias_label">Alias:</string>
+    <string name="set_alias_button">Set</string>
+
+</resources>
