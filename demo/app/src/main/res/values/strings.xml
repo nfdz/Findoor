@@ -2,6 +2,8 @@
 
     <string name="app_name">Findoor Demo</string>
 
+    <string name="time_format_pattern">HH:mm:ss dd/MM/yyyy</string>
+
     <string name="record_location">Record location</string>
     <string name="view_location">Visualize location</string>
     <string name="compare_locations">Compare locations</string>
@@ -20,5 +22,9 @@
     <string name="location_label">Location:</string>
     <string name="alias_label">Alias:</string>
     <string name="set_alias_button">Set</string>
+    <string name="format_error_msg">Error: invalid format.</string>
+    <string name="ask_date_subtitle">Use following pattern: </string>
+    <string name="ask_date_title">Set time</string>
+    <string name="ask_date_set">Set</string>
 
 </resources>
