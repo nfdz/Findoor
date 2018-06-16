@@ -27,4 +27,16 @@
     <string name="ask_date_title">Set time</string>
     <string name="ask_date_set">Set</string>
 
+    <string name="explain_permissions_title">Permissions</string>
+    <string name="explain_permissions_msg">These permissions are required.</string>
+
+    <!-- Record -->
+    <string name="permissions_error_msg">Error: required permissions are not granted.</string>
+    <string name="wifi_disabled_error_msg">Error: wifi is disabled. Enable it and try again.</string>
+    <string name="gps_disabled_title">Location</string>
+    <string name="gps_disabled_message">Location service must be enabled. This is a mandatory requirement in some devices to provide wifi data.</string>
+    <string name="start_record">Start</string>
+    <string name="stop_record">Stop</string>
+    <string name="record_time">Time</string>
+
 </resources>
