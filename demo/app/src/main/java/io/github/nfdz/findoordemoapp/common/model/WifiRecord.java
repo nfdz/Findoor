@@ -4,10 +4,21 @@ import android.support.annotation.NonNull;
 
 import java.util.Date;
 
+import io.github.nfdz.findoor.model.Record;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
 public class WifiRecord extends RealmObject {
+
+    public static WifiRecord buildFromRecord(int locationId, Record record) {
+        return new WifiRecord(locationId,
+                record.ssid,
+                record.bssid,
+                record.level,
+                record.rssi,
+                record.frequency,
+                record.timestamp);
+    }
 
     @PrimaryKey
     public String recordId;

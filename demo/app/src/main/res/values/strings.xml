@@ -38,5 +38,7 @@
     <string name="start_record">Start</string>
     <string name="stop_record">Stop</string>
     <string name="record_time">Time</string>
+    <string name="go_location_setting">Settings</string>
+    <string name="close_location_dialog">Close</string>
 
 </resources>

@@ -25,6 +25,7 @@ import io.github.nfdz.findoordemoapp.R;
 import io.github.nfdz.findoordemoapp.common.dialog.SetAliasDialogFragment;
 import io.github.nfdz.findoordemoapp.common.utils.PreferencesUtils;
 import io.github.nfdz.findoordemoapp.common.utils.RealmUtils;
+import io.github.nfdz.findoordemoapp.record.view.RecordActivity;
 import io.realm.Realm;
 
 public class MainActivity extends AppCompatActivity {
@@ -168,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
                 int position = getAdapterPosition();
                 switch (position) {
                     case 0:
-                        //RecordActivity.start(MainActivity.this);
+                        RecordActivity.start(MainActivity.this);
                         break;
                     case 1:
                         //ViewRecordsActivity.start(MainActivity.this);
