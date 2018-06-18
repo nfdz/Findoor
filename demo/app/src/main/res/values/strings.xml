@@ -56,4 +56,14 @@
     <string name="samples_error_msg">Error: invalid records samples count.</string>
     <string name="processing_error_msg">Error: processing records.</string>
 
+    <!-- Delete -->
+    <string name="delete_success_msg">Deleted successfully</string>
+    <string name="delete_error_msg">Error: there was a problem while deleting.</string>
+    <string name="delete_confirmation">Do you confirm you want to delete?</string>
+    <string name="delete_location_button">Delete location</string>
+    <string name="delete_location_interval_button">Delete interval</string>
+    <string name="delete_with_less_samples_button">Delete samples</string>
+    <string name="delete_with_less_samples">|- With less samples than:</string>
+    <string name="delete_all">Delete all</string>
+
 </resources>

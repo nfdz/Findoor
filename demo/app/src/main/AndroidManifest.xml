@@ -27,6 +27,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".view.view.ViewActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".delete.view.DeleteActivity"
+            android:screenOrientation="portrait"/>
 
     </application>
 

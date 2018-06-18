@@ -48,6 +48,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/ask_date_set"
+        style="@style/Widget.AppCompat.Button.Colored"
         app:layout_constraintTop_toBottomOf="@+id/tv_subtitle"
         app:layout_constraintLeft_toLeftOf="@+id/tv_subtitle"
         app:layout_constraintRight_toRightOf="@+id/tv_subtitle"

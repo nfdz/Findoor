@@ -25,6 +25,7 @@ import io.github.nfdz.findoordemoapp.R;
 import io.github.nfdz.findoordemoapp.common.dialog.SetAliasDialogFragment;
 import io.github.nfdz.findoordemoapp.common.utils.PreferencesUtils;
 import io.github.nfdz.findoordemoapp.common.utils.RealmUtils;
+import io.github.nfdz.findoordemoapp.delete.view.DeleteActivity;
 import io.github.nfdz.findoordemoapp.record.view.RecordActivity;
 import io.github.nfdz.findoordemoapp.view.view.ViewActivity;
 import io.realm.Realm;
@@ -188,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
                         setLocationAlias();
                         break;
                     case 6:
-                        //DeleteRecordsActivity.start(MainActivity.this);
+                        DeleteActivity.start(MainActivity.this);
                         break;
                     case 7:
                         // TODO
