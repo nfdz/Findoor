@@ -41,4 +41,17 @@
     <string name="go_location_setting">Settings</string>
     <string name="close_location_dialog">Close</string>
 
+    <!-- View -->
+    <string name="load_location_info">Load</string>
+    <string name="close_location_info">Close</string>
+    <string name="samples_label">Samples count:</string>
+    <string name="first_timestamp_label">First record:</string>
+    <string name="last_timestamp_label">Last record:</string>
+    <string name="interval_from_label">|- From:</string>
+    <string name="interval_to_label">|- To:</string>
+    <string name="interval_view">View</string>
+    <string name="interval_close">Close</string>
+    <string name="samples_value">%1$d samples</string>
+
+
 </resources>

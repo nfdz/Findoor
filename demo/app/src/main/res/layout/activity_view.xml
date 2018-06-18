@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_location_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/location_label"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginLeft="@dimen/activity_margin" />
+
+    <EditText
+        android:id="@+id/et_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/tv_location_label"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_location_label"
+        app:layout_constraintRight_toLeftOf="@+id/btn_start_load"
+        app:layout_constraintLeft_toRightOf="@+id/tv_location_label"
+        android:maxLength="4"
+        android:textAlignment="center"
+        android:inputType="number"
+        tools:text="0"/>
+
+    <Button
+        android:id="@+id/btn_start_load"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/load_location_info"
+        style="@style/Widget.AppCompat.Button.Colored"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_location_label"
+        app:layout_constraintBottom_toBottomOf="@id/tv_location_label"
+        android:layout_marginEnd="@dimen/activity_margin"
+        android:layout_marginRight="@dimen/activity_margin" />
+
+    <Button
+        android:id="@+id/btn_stop_close"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/close_location_info"
+        android:visibility="invisible"
+        style="@style/Widget.AppCompat.Button.Colored"
+        app:layout_constraintTop_toTopOf="@+id/btn_start_load"
+        app:layout_constraintRight_toRightOf="@+id/btn_start_load"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_start_load"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_start_load"/>
+
+    <View
+        android:id="@+id/v_header_separator"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_start_load"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/tv_samples_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/samples_label"
+        app:layout_constraintTop_toBottomOf="@+id/v_header_separator"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_location_label"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_samples_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="133 muestras"
+        app:layout_constraintTop_toTopOf="@+id/tv_samples_label"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_samples_label"
+        app:layout_constraintLeft_toRightOf="@+id/tv_samples_label"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/tv_first_timestamp_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/first_timestamp_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_samples_label"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_samples_label"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_first_timestamp_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="10:44:44 10/10/10"
+        app:layout_constraintTop_toTopOf="@+id/tv_first_timestamp_label"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_first_timestamp_label"
+        app:layout_constraintLeft_toRightOf="@+id/tv_first_timestamp_label"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/tv_last_timestamp_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/last_timestamp_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_first_timestamp_label"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_first_timestamp_label"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_last_timestamp_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="10:44:44 10/10/10"
+        app:layout_constraintTop_toTopOf="@+id/tv_last_timestamp_label"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_last_timestamp_label"
+        app:layout_constraintLeft_toRightOf="@+id/tv_last_timestamp_label"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp" />
+
+    <View
+        android:id="@+id/v_interval_separator"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_last_timestamp_label"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/tv_interval_from_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/interval_from_label"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_last_timestamp_label"
+        app:layout_constraintTop_toBottomOf="@+id/v_interval_separator"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_interval_from_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="10:44:44 10/10/2000"
+        android:textAlignment="center"
+        app:layout_constraintRight_toLeftOf="@+id/btn_interval_view"
+        app:layout_constraintLeft_toRightOf="@+id/tv_interval_from_label"
+        app:layout_constraintTop_toTopOf="@+id/tv_interval_from_label"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_interval_from_label"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="8dp"
+        android:textSize="12sp"
+        android:layout_marginEnd="8dp"/>
+
+    <View
+        android:id="@+id/v_interval_from_underline"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_interval_from_value"
+        app:layout_constraintLeft_toLeftOf="@id/tv_interval_from_value"
+        app:layout_constraintRight_toRightOf="@id/tv_interval_from_value"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_interval_to_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/interval_to_label"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_interval_from_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_interval_from_label"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_interval_to_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="10:44:44 10/10/2000"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        app:layout_constraintRight_toLeftOf="@+id/btn_interval_view"
+        app:layout_constraintLeft_toRightOf="@+id/tv_interval_to_label"
+        app:layout_constraintTop_toTopOf="@+id/tv_interval_to_label"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_interval_to_label"
+        android:layout_marginStart="8dp"
+        android:textSize="12sp"
+        android:layout_marginEnd="8dp"/>
+
+    <View
+        android:id="@+id/v_interval_to_underline"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_interval_to_value"
+        app:layout_constraintLeft_toLeftOf="@id/tv_interval_to_value"
+        app:layout_constraintRight_toRightOf="@id/tv_interval_to_value"
+        android:background="@android:color/black" />
+
+    <Button
+        android:id="@+id/btn_interval_view"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/interval_view"
+        android:enabled="false"
+        style="@style/Widget.AppCompat.Button.Colored"
+        app:layout_constraintTop_toTopOf="@+id/tv_interval_from_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_interval_to_value"
+        android:layout_marginEnd="@dimen/activity_margin"
+        android:layout_marginRight="@dimen/activity_margin" />
+
+    <Button
+        android:id="@+id/btn_interval_close"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/interval_close"
+        android:visibility="invisible"
+        style="@style/Widget.AppCompat.Button.Colored"
+        app:layout_constraintTop_toTopOf="@+id/btn_interval_view"
+        app:layout_constraintRight_toRightOf="@+id/btn_interval_view"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_interval_view"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_interval_view"/>
+
+    <View
+        android:id="@+id/v_records_separator"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_interval_to_value"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryDark" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_records"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/v_records_separator"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

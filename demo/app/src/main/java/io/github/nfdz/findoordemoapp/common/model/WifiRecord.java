@@ -87,4 +87,13 @@ public class WifiRecord extends RealmObject {
                 rssi + "dBm, " + new Date(timestamp);
     }
 
+    public Record toRecord() {
+        return new Record(ssid,
+                bssid,
+                level,
+                rssi,
+                frequency,
+                timestamp);
+    }
+
 }
