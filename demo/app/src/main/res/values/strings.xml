@@ -52,6 +52,8 @@
     <string name="interval_view">View</string>
     <string name="interval_close">Close</string>
     <string name="samples_value">%1$d samples</string>
-
+    <string name="interval_error_msg">Error: invalid selected interval.</string>
+    <string name="samples_error_msg">Error: invalid records samples count.</string>
+    <string name="processing_error_msg">Error: processing records.</string>
 
 </resources>

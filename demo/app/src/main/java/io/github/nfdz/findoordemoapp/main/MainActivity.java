@@ -26,6 +26,7 @@ import io.github.nfdz.findoordemoapp.common.dialog.SetAliasDialogFragment;
 import io.github.nfdz.findoordemoapp.common.utils.PreferencesUtils;
 import io.github.nfdz.findoordemoapp.common.utils.RealmUtils;
 import io.github.nfdz.findoordemoapp.record.view.RecordActivity;
+import io.github.nfdz.findoordemoapp.view.view.ViewActivity;
 import io.realm.Realm;
 
 public class MainActivity extends AppCompatActivity {
@@ -172,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
                         RecordActivity.start(MainActivity.this);
                         break;
                     case 1:
-                        //ViewRecordsActivity.start(MainActivity.this);
+                        ViewActivity.start(MainActivity.this);
                         break;
                     case 2:
                         //CompareRecordsActivity.start(MainActivity.this);
