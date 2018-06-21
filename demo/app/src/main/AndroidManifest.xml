@@ -29,6 +29,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".delete.view.DeleteActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".compare.view.CompareActivity"
+            android:screenOrientation="portrait"/>
 
     </application>
 

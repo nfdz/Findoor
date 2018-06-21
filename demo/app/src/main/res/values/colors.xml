@@ -3,4 +3,9 @@
     <color name="colorPrimary">#4a148c</color>
     <color name="colorPrimaryDark">#12005e</color>
     <color name="colorAccent">#4a148c</color>
+
+    <color name="colorRawGap">#006600</color>
+    <color name="colorNetGap">#0033cc</color>
+    <color name="dark_semitransparent_layer">#55000000</color>
+
 </resources>
