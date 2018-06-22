@@ -79,5 +79,8 @@
     <string name="mean_net_gap_ignoring">Net mean (ignoring)</string>
     <string name="similarity">Similarity</string>
 
+    <!-- Trial -->
+    <string name="locations_label">Localizaciones:</string>
+    <string name="locations_error_msg">Error: invalid locations. It uses comma as separator. It needs two at least.</string>
 
 </resources>

@@ -31,6 +31,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".compare.view.CompareActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".trial.view.TrialActivity"
+            android:screenOrientation="portrait"/>
 
     </application>
 
