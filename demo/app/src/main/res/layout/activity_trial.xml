@@ -58,6 +58,7 @@
         android:layout_height="0dp"
         android:text="@string/stop_record"
         android:visibility="invisible"
+        style="@style/Widget.AppCompat.Button.Colored"
         app:layout_constraintTop_toTopOf="@+id/btn_start_trial"
         app:layout_constraintRight_toRightOf="@+id/btn_start_trial"
         app:layout_constraintBottom_toBottomOf="@+id/btn_start_trial"

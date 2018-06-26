@@ -71,12 +71,12 @@
     <string name="location_B_label">Test</string>
     <string name="compare_locations_button">Compare</string>
 
-    <string name="raw_gap_label">Raw</string>
-    <string name="net_gap_label">Net</string>
-    <string name="mean_raw_gap">Raw mean</string>
-    <string name="mean_net_gap">Net mean</string>
-    <string name="mean_raw_gap_ignoring">Raw mean (ignoring)</string>
-    <string name="mean_net_gap_ignoring">Net mean (ignoring)</string>
+    <string name="raw_gap_label">Raw gap</string>
+    <string name="net_gap_label">Net gap</string>
+    <string name="mean_raw_gap">Raw mean gap</string>
+    <string name="mean_net_gap">Net mean gap</string>
+    <string name="mean_raw_gap_ignoring">Raw mean gap (ignoring)</string>
+    <string name="mean_net_gap_ignoring">Net mean gap (ignoring)</string>
     <string name="similarity">Similarity</string>
 
     <!-- Trial -->

@@ -28,6 +28,7 @@ import io.github.nfdz.findoordemoapp.common.utils.RealmUtils;
 import io.github.nfdz.findoordemoapp.compare.view.CompareActivity;
 import io.github.nfdz.findoordemoapp.delete.view.DeleteActivity;
 import io.github.nfdz.findoordemoapp.record.view.RecordActivity;
+import io.github.nfdz.findoordemoapp.trial.view.TrialActivity;
 import io.github.nfdz.findoordemoapp.view.view.ViewActivity;
 import io.realm.Realm;
 
@@ -181,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
                         CompareActivity.start(MainActivity.this);
                         break;
                     case 3:
-                        //TrialActivity.start(MainActivity.this);
+                        TrialActivity.start(MainActivity.this);
                         break;
                     case 4:
                         listLocations();
