@@ -2,5 +2,6 @@
 <resources>
 
     <string name="time_format_pattern">HH:mm:ss MM/dd/yyyy</string>
+    <string name="date_format_pattern">MM/dd/yyyy</string>
 
 </resources>

@@ -1,6 +1,8 @@
 package io.github.nfdz.findoordemoapp.main;
 
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
@@ -22,7 +24,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.github.nfdz.findoordemoapp.R;
+import io.github.nfdz.findoordemoapp.common.dialog.AskLocationToExportDialogFragment;
 import io.github.nfdz.findoordemoapp.common.dialog.SetAliasDialogFragment;
+import io.github.nfdz.findoordemoapp.common.utils.ImportExportUtils;
 import io.github.nfdz.findoordemoapp.common.utils.PreferencesUtils;
 import io.github.nfdz.findoordemoapp.common.utils.RealmUtils;
 import io.github.nfdz.findoordemoapp.compare.view.CompareActivity;
@@ -37,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.recycler_view) RecyclerView recycler_view;
 
     private Realm realm;
+    private Integer locationToExport;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         realm = Realm.getInstance(RealmUtils.getConfiguration());
+        locationToExport = null;
         setupRecyclerView();
     }
 
@@ -51,6 +57,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         realm.close();
         super.onDestroy();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent resultData) {
+        if (ImportExportUtils.onImportActivityResult(requestCode, resultCode, resultData, this, realm)) {
+            return;
+        }
+        if (locationToExport != null) {
+            if (ImportExportUtils.onExportActivityResult(requestCode, resultCode, resultData, this, locationToExport, realm)) {
+                locationToExport = null;
+                return;
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, resultData);
     }
 
     private void setupRecyclerView() {
@@ -104,6 +124,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         dialog.show(getSupportFragmentManager(), "SetAliasDialogFragment");
+    }
+
+    private void importLocation() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            ImportExportUtils.importLocation(MainActivity.this);
+        } else {
+            Toast.makeText(this, R.string.error_kitkat_version, Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private void exportLocation() {
+        AskLocationToExportDialogFragment dialog = AskLocationToExportDialogFragment.newInstance();
+        dialog.setListener(new AskLocationToExportDialogFragment.LocationListener() {
+            @Override
+            public void onExport(int location) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                    locationToExport = location;
+                    ImportExportUtils.exportLocation(MainActivity.this, locationToExport);
+                } else {
+                    Toast.makeText(MainActivity.this, R.string.error_kitkat_version, Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        dialog.show(getSupportFragmentManager(), "AskLocationToExportDialogFragment");
     }
 
     public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
@@ -194,12 +238,10 @@ public class MainActivity extends AppCompatActivity {
                         DeleteActivity.start(MainActivity.this);
                         break;
                     case 7:
-                        // TODO
-                        Toast.makeText(MainActivity.this, "TODO", Toast.LENGTH_LONG).show();
+                        exportLocation();
                         break;
                     case 8:
-                        // TODO
-                        Toast.makeText(MainActivity.this, "TODO", Toast.LENGTH_LONG).show();
+                        importLocation();
                         break;
                 }
             }

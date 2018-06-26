@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/activity_margin">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/export_ask_location_title"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/et_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="1"
+        android:textAlignment="center"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_title"
+        app:layout_constraintRight_toRightOf="@+id/tv_title"
+        android:maxLines="1"
+        android:layout_marginTop="8dp"
+        android:maxLength="19"/>
+
+    <Button
+        android:id="@+id/btn_export"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/export_ask_location_confirm"
+        style="@style/Widget.AppCompat.Button.Colored"
+        app:layout_constraintTop_toBottomOf="@+id/et_location"
+        app:layout_constraintLeft_toLeftOf="@+id/et_location"
+        app:layout_constraintRight_toRightOf="@+id/et_location"
+        android:layout_marginTop="8dp"  />
+
+</android.support.constraint.ConstraintLayout>

@@ -3,6 +3,7 @@
     <string name="app_name">Findoor Demo</string>
 
     <string name="time_format_pattern">HH:mm:ss dd/MM/yyyy</string>
+    <string name="date_format_pattern">dd/MM/yyyy</string>
 
     <string name="record_location">Record location</string>
     <string name="view_location">Visualize location</string>
@@ -82,5 +83,20 @@
     <!-- Trial -->
     <string name="locations_label">Localizaciones:</string>
     <string name="locations_error_msg">Error: invalid locations. It uses comma as separator. It needs two at least.</string>
+
+    <!-- Import -->
+    <string name="import_error_serialization">Error reading file (wrong serialization)</string>
+    <string name="import_error_empty">Error reading file (it is empty)</string>
+    <string name="import_error_file">Error reading file</string>
+    <string name="import_error">Error importing from that selected file</string>
+    <string name="import_success">Import finished successfully</string>
+    <string name="error_kitkat_version">Android Kitkat version or higher is required for this feature</string>
+
+    <!-- Export -->
+    <string name="export_error_file">There was an error writing</string>
+    <string name="export_success">Export finished successfully</string>
+    <string name="export_error">Error exporting into that selected file</string>
+    <string name="export_ask_location_title">Location to export</string>
+    <string name="export_ask_location_confirm">Export</string>
 
 </resources>
