@@ -8,6 +8,7 @@ import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v4.provider.DocumentFile;
+import android.text.TextUtils;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -17,13 +18,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
 import io.github.nfdz.findoordemoapp.R;
 import io.github.nfdz.findoordemoapp.common.model.WifiRecord;
+import io.github.nfdz.findoordemoapp.common.model.WifiRecordDto;
 import io.realm.Realm;
 import io.realm.RealmResults;
 import io.realm.Sort;
@@ -36,7 +39,7 @@ public class ImportExportUtils {
 
     private static final String CHARSET = "UTF-8";
     private static final String MIME_TYPE = "text/*";
-    private static final String SUGGESTED_NAME_FORMAT = "location-%s-%s.findoor";
+    private static final String SUGGESTED_NAME_FORMAT = "location_%s_%s.findoor";
 
     @RequiresApi(Build.VERSION_CODES.KITKAT)
     public static void importLocation(Activity activity) {
@@ -71,8 +74,12 @@ public class ImportExportUtils {
                                 String inputStreamString = new Scanner(in, CHARSET).useDelimiter("\\A").next();
                                 try {
                                     Gson gson = new Gson();
-                                    WifiRecord[] records = gson.fromJson(inputStreamString, WifiRecord[].class);
-                                    realm.copyToRealmOrUpdate(Arrays.asList(records));
+                                    WifiRecordDto[] recordsDto = gson.fromJson(inputStreamString, WifiRecordDto[].class);
+                                    List<WifiRecord> records = new ArrayList<>();
+                                    for (WifiRecordDto recordDto : recordsDto) {
+                                        records.add(recordDto.toModel());
+                                    }
+                                    realm.copyToRealmOrUpdate(records);
                                 } catch (JsonSyntaxException e) {
                                     throw new RuntimeException(context.getString(R.string.import_error_serialization), e);
                                 }
@@ -125,7 +132,8 @@ public class ImportExportUtils {
         String timeFormatPattern = activity.getString(R.string.date_format_pattern);
         SimpleDateFormat sdf = new SimpleDateFormat(timeFormatPattern, Locale.getDefault());
         String currentDate = sdf.format(new Date());
-        String name = location + PreferencesUtils.getLocationAlias(activity, location);
+        String alias = PreferencesUtils.getLocationAlias(activity, location);
+        String name = TextUtils.isEmpty(alias) ? String.valueOf(location) : alias;
         String suggestedName = String.format(SUGGESTED_NAME_FORMAT, name, currentDate);
         intent.putExtra(Intent.EXTRA_TITLE, suggestedName);
         activity.startActivityForResult(intent, WRITE_REQUEST_CODE);
@@ -148,8 +156,12 @@ public class ImportExportUtils {
                                 .equalTo(WifiRecord.LOCATION_FIELD, location)
                                 .sort(WifiRecord.TIMESTAMP_FIELD, Sort.ASCENDING)
                                 .findAll();
+                        List<WifiRecordDto> recordsDto = new ArrayList<>();
+                        for (WifiRecord record : records) {
+                            recordsDto.add(record.toDto());
+                        }
                         Gson gson = new Gson();
-                        String serializedRecords = gson.toJson(records.toArray(new WifiRecord[]{}));
+                        String serializedRecords = gson.toJson(recordsDto);
                         OutputStream out = null;
                         try {
                             DocumentFile newFile = DocumentFile.fromSingleUri(context, uri);

@@ -96,4 +96,14 @@ public class WifiRecord extends RealmObject {
                 timestamp);
     }
 
+    public WifiRecordDto toDto() {
+        return new WifiRecordDto(location,
+                ssid,
+                bssid,
+                level,
+                rssi,
+                frequency,
+                timestamp);
+    }
+
 }

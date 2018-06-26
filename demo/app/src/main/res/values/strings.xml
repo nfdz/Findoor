@@ -3,7 +3,7 @@
     <string name="app_name">Findoor Demo</string>
 
     <string name="time_format_pattern">HH:mm:ss dd/MM/yyyy</string>
-    <string name="date_format_pattern">dd/MM/yyyy</string>
+    <string name="date_format_pattern">dd-MM-yyyy</string>
 
     <string name="record_location">Record location</string>
     <string name="view_location">Visualize location</string>
