@@ -36,6 +36,8 @@ Jitpack works with several build systems, please checkout the [documentation](ht
 
 ## Sample app
 
+This app shows several uses cases of this library and it is totally functional. Feel free to use it as you need. For example, you could use this app in order to get records of location spots you need and serve or embed them in your production app.
+
 ### Download
 
 <p align="center"><a href="https://play.google.com/store/apps/details?id=io.github.nfdz.TODO">
