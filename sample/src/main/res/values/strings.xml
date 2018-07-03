@@ -38,7 +38,7 @@
     <string name="gps_disabled_message">Location service must be enabled. This is a mandatory requirement in some devices to provide wifi data.</string>
     <string name="start_record">Start</string>
     <string name="stop_record">Stop</string>
-    <string name="record_time">Time</string>
+    <string name="record_time">Time:</string>
     <string name="go_location_setting">Settings</string>
     <string name="close_location_dialog">Close</string>
 
@@ -81,7 +81,7 @@
     <string name="similarity">Similarity</string>
 
     <!-- Trial -->
-    <string name="locations_label">Localizaciones:</string>
+    <string name="locations_label">Locations:</string>
     <string name="locations_error_msg">Error: invalid locations. It uses comma as separator. It needs two at least.</string>
 
     <!-- Import -->

@@ -44,6 +44,19 @@ This app shows several uses cases of this library and it is totally functional. 
   <img width="250" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png?raw=true" alt="Get it on Google Play"/>
 </a></p>
 
+### Screenshots
+
+<p align="center">
+  <img src="dev/screenshots/1.png?raw=true" width="250" alt="Main"/>
+  <img src="dev/screenshots/2.png?raw=true" width="250" alt="Record"/>
+  <img src="dev/screenshots/3.png?raw=true" width="250" alt="Compare"/>
+</p>
+<p align="center">
+  <img src="dev/screenshots/4.png?raw=true" width="250" alt="List"/>
+  <img src="dev/screenshots/5.png?raw=true" width="250" alt="Visualize"/>
+  <img src="dev/screenshots/6.png?raw=true" width="250" alt="Try"/>
+</p>
+
 ## License
 
     Licensed under the Apache License, Version 2.0 (the "License");
