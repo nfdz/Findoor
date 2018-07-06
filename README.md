@@ -6,6 +6,10 @@ Simple Android Library for Indoor Wi-Fi Navigation. It makes it easy to work wit
   <img src="dev/dummy-scenario.png?raw=true" alt="Dummy scenario"/>
 </p>
 
+## TODO
+ * Improve similarity and net gap algorithm.
+ * Implement `FindoorCriteria` with different criteria and output parameters such as confidence, etc.
+
 ## Library
 
 ### Key points
@@ -28,7 +32,7 @@ It is very use integrate this library in your project as a dependency of your bu
    }
    ...
    dependencies {
-      implementation 'com.github.nfdz:TODO'
+      implementation 'com.github.nfdz:findoor:v1.0.1'
    }
    ```
 
