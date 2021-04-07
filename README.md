@@ -15,7 +15,7 @@ Android Library for Indoor Wi-Fi Navigation.
 
 ### Key points
 The learning curve of this library is very fast, the classes and concepts with which you have to learn to work are the following:
- * [`Record`](https://github.com/nfdz/findoor/blob/master/Findoor/src/main/java/io/github/nfdz/findoor/model/Record.java) 
+ * [`Record`](https://github.com/nfdz/Findoor/blob/master/findoor/src/main/java/io/github/nfdz/findoor/model/Record.java) 
  * [`LocationComparison`](https://github.com/nfdz/Findoor/blob/master/findoor/src/main/java/io/github/nfdz/findoor/model/LocationComparison.java)
  * [`FindoorRecorder`](https://github.com/nfdz/Findoor/blob/master/findoor/src/main/java/io/github/nfdz/findoor/FindoorRecorder.java)
  * [`FindoorProcessor`](https://github.com/nfdz/Findoor/blob/master/findoor/src/main/java/io/github/nfdz/findoor/FindoorProcessor.java)
